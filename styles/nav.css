@@ -3,9 +3,7 @@
 * {
     box-sizing: border-box;
     margin: 0;
-    padding: 0;
-    background-color: #24252a;
-}
+    padding: 0;}
 
 li, a, button {
     font-family: "montserrat", sans-serif;
@@ -15,11 +13,16 @@ li, a, button {
     text-decoration: none;
 }
 
+body {
+    background-color: #565656;
+}
+
 header {
     display: flex;
     justify-content: flex-end;
     align-items: center;
     padding: 30px 10%;
+    background-color: #24252a;
 }
 
 .logo {

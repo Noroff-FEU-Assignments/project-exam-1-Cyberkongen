@@ -1,0 +1,20 @@
+.carouselContainer {
+padding: 2rem;
+border: 1px solid black;
+height: 25rem;
+width: 40rem;
+}
+
+main {
+    padding: 30px 10%;
+}
+
+.carouselWrapper {
+    position: relative;
+    max-width: 48rem;
+    margin: 0 auto;
+}
+
+.carousel {
+    displa
+}
