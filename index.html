@@ -3,25 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&display=swap');
+      </style>
     <link rel="stylesheet" href="/styles/nav.css">
     <link rel="stylesheet" href="/styles/landing.css">
     <title>Home Page</title>
 </head>
 <body>
     <header>
-        <img class="logo" src="/assets/logo.jpg" alt="logo">
-        <nav>
+        <a href="/index.html" class="logo"><img src="/assets/logo.jpg" alt="logo"></a>        <nav>
             <ul class="nav-links">
-                <li><a href="#">Services</a></li>
+                <li><a href="/posts.html">Posts</a></li>
                 <li><a href="#">Projects</a></li>
                 <li><a href="#">About</a></li>
             </ul>
         </nav>
-        <a class="cta" href="#"><button>Contact</button></a>
+        <a class="cta" href="/contact.html"><button>Contact</button></a>
     </header>
     <main>
         <div class="carouselContainer">
-            <section class="carouselWrapper">
+            <section class="carouselWrapper topL-section">
+                <div class="carouselTitle"></div>
                 <div class="carousel">
                 </div>
                 <div class="carouselNav">
@@ -31,7 +34,9 @@
                     <span id="rightarrow" class="left arrow"></span>
                 </div>
             </section>
-            <section class="latestPosts"></section>
+            <section class="latestPosts topR-section"></section>
+            <section class="bottom-section">
+            </section>
         </div>
     </main>
     <script src="/js/carousel.js"></script>

@@ -14,7 +14,7 @@ li, a, button {
 }
 
 body {
-    background-color: #565656;
+    background-color: #EEEEEE;
 }
 
 header {
@@ -60,3 +60,10 @@ button {
 button:hover {
     background: rgba(0, 136, 169, 0.8);
 }
+
+
+@media (max-width: 1000px) {
+    header {
+        padding: 15px 5%;
+    }
+  }

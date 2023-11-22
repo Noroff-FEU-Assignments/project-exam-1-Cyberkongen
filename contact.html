@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&display=swap');
+      </style>
+    <link rel="stylesheet" href="/styles/nav.css">
+    <link rel="stylesheet" href="/styles/contact.css">
+    <title>Contact Page</title>
+</head>
+<body>
+    <header>
+        <a href="/index.html" class="logo"><img src="/assets/logo.jpg" alt="logo"></a>        <nav>
+            <ul class="nav-links">
+                <li><a href="/posts.html">Posts</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </nav>
+        <a class="cta" href="/contact.html"><button>Contact</button></a>
+    </header>
+    <main>
+        <form id="contactForm">
+            <div>
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name">
+              <span id="nameError" class="error"></span>
+            </div>
+            
+            <div>
+              <label for="email">Email Address:</label>
+              <input type="email" id="email" name="email">
+              <span id="emailError" class="error"></span>
+            </div>
+            
+            <div>
+              <label for="subject">Subject:</label>
+              <input type="text" id="subject" name="subject">
+              <span id="subjectError" class="error"></span>
+            </div>
+            
+            <div>
+              <label for="message">Message:</label>
+              <textarea id="message" name="message"></textarea>
+              <span id="messageError" class="error"></span>
+            </div>
+            
+            <button id="formButton" type="submit">Submit</button>
+          </form>
+    </main>
+    <script src="/js/contactForm.js"></script>
+</body>
+</html>
