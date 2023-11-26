@@ -43,6 +43,11 @@
             <button id="showMoreBtn">Show More</button>
         </div>
     </main>
+    <script>
+        if ('ontouchstart' in document.documentElement) {
+            document.body.classList.add('touch-device');
+        }
+    </script>
     <script src="/js/nav.js"></script>
     <script src="/js/posts.js"></script>
 </body>
