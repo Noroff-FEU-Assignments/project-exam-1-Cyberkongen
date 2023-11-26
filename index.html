@@ -8,18 +8,35 @@
       </style>
     <link rel="stylesheet" href="/styles/nav.css">
     <link rel="stylesheet" href="/styles/landing.css">
+    <!-- Hotjar Tracking Code for CapitalHub -->
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:3749319,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
     <title>Home Page</title>
 </head>
 <body>
     <header>
-        <a href="/index.html" class="logo"><img src="/assets/logo.jpg" alt="logo"></a>        <nav>
+        <nav class="nav-menu">
+            <a href="/index.html" class="logo"><img src="/assets/logo.jpg" alt="logo"></a>
             <ul class="nav-links">
-                <li><a href="/posts.html">Posts</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">About</a></li>
+                <li class="nav-item"><a href="/posts.html">Posts</a></li>
+                <li class="nav-item"><a href="#">Projects</a></li>
+                <li class="nav-item"><a href="#">About</a></li>
+                <a class="cta nav-item" href="/contact.html"><button>Contact</button></a>
             </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
         </nav>
-        <a class="cta" href="/contact.html"><button>Contact</button></a>
     </header>
     <main>
         <div class="carouselContainer">
@@ -39,6 +56,7 @@
             </section>
         </div>
     </main>
+    <script src="/js/nav.js"></script>
     <script src="/js/carousel.js"></script>
 </body>
 </html>

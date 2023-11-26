@@ -29,7 +29,7 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     }
     
     if (subject.length <= 10) {
-      subjectError.textContent = 'Subject must be more than 10 characters';
+      subjectError.textContent = 'Subject must be more than 15 characters';
       isValid = false;
     } else {
       subjectError.textContent = '';

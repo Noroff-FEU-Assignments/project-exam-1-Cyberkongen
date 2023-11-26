@@ -112,7 +112,7 @@
 	 font-weight: bold;
 }
 .card__title a {
-	font-size: 1vw;
+	font-size: 1rem;
 }
  .card:hover .card__title {
 	 animation: titleBlur 0.3s;
@@ -222,4 +222,18 @@
 		 opacity: 1;
 		 text-shadow: 0px 5px 5px rgba(0, 136, 204, 0);
 	}
+}
+
+@media screen and (min-width: 2550px) {
+	.card {
+		width: 476px;
+		height: 500px;
+   }
+
+    }
+@media screen and (max-width: 575.98px) {
+	.posts-container {
+		gap: 20px;
+	}
+
 }
