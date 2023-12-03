@@ -90,6 +90,15 @@ fetch(apiUrl)
       updateTitle();
     });
 
+    document.addEventListener('keydown', function(event) {
+      if (event.key === 'ArrowLeft') {
+        leftArrow.click();
+      } else if (event.key === 'ArrowRight') {
+        rightArrow.click();
+      }
+    });
+    
+
     function shuffleArray(array) {
       for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i+1));
