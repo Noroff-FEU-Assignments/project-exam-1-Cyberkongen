@@ -82,7 +82,7 @@ fetch(apiUrl)
     });
     
     rightArrow.addEventListener('click', function(event) {
-      event.preventDefault(); // Prevent the default behavior (scrolling)
+      event.preventDefault();
       currentSlideIndex = (currentSlideIndex + 1) % data.length;
       carousel.querySelector(`#slide-${currentSlideIndex + 1}`).scrollIntoView({ behavior: 'auto', block: 'nearest', inline: 'start' });
       updateTitle();
