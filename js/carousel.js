@@ -20,6 +20,7 @@ fetch(apiUrl)
       const carouselImg = document.createElement("img");
       carouselImg.src = post._embedded["wp:featuredmedia"][0].source_url;
       carousel.appendChild(carouselImg);
+      carouselImg.alt = post.title.rendered;
       carouselImg.id = "slide-" + (slideIndex + 1);
 
       const carouselButton = document.createElement("a");
@@ -31,6 +32,7 @@ fetch(apiUrl)
       latestPosts.appendChild(latestPostsDiv);
       const latestPostsDivImage = document.createElement("img");
       latestPostsDivImage.src = post._embedded["wp:featuredmedia"][0].source_url;
+      latestPostsDivImage.alt = post.title.rendered;
       latestPostsDiv.appendChild(latestPostsDivImage);
       const latestPostsDivTitle = document.createElement("h2");
       latestPostsDiv.appendChild(latestPostsDivTitle);
@@ -107,6 +109,7 @@ fetch(apiUrl)
 
       const BottomSectionImage = document.createElement("img");
       bottomSectionDiv.appendChild(BottomSectionImage);
+      BottomSectionImage.alt = randomPost.title.rendered;
       BottomSectionImage.src = randomPost._embedded["wp:featuredmedia"][0].source_url
 
       const bottomSectionTitle = document.createElement("h1");
