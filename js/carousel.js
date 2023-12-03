@@ -121,6 +121,9 @@ fetch(apiUrl)
       BottomSectionImage.alt = randomPost.title.rendered;
       BottomSectionImage.src = randomPost._embedded["wp:featuredmedia"][0].source_url
 
+      let queryString = 'post='+randomPost.id;
+      BottomSectionImage.addEventListener("click", imgIDtoURL);
+
       const bottomSectionTitle = document.createElement("h1");
       bottomSectionDiv.appendChild(bottomSectionTitle);
       bottomSectionTitle.textContent = randomPost.title.rendered;

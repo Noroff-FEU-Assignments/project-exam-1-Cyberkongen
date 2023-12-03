@@ -13,11 +13,12 @@
 }
 
 .contentwrapper div {
-    max-width: 90%;
+    max-width: 50%;
 }
 
+
 footer {
-    margin: 2.5% 10%;
+    margin: 2.5% 20%;
     display: flex;
     border-top: 2px solid black;
 }
@@ -31,6 +32,22 @@ footer {
 
 @media screen and (min-width: 950px) {
     .contentwrapper img {
-        max-width: 50%;
+        max-width: 52.5%;
+    }
+}
+@media screen and (max-width: 949px) {
+    .contentwrapper {
+        margin: 1%;
+    }
+    .contentwrapper img {
+        width: 100%;
+    }
+    .contentwrapper div {
+        max-width: 90%;
+    }
+    footer {
+        margin: 2.5% 5%;
+        display: flex;
+        border-top: 2px solid black;
     }
 }
