@@ -9,17 +9,44 @@ async function fetchPostData(postId) {
       }
       
       const postData = await response.json();
-      return postData[0]; // Assuming the response returns an array of posts, and we want the first one (with index 0)
+      return postData[0];
     } catch (error) {
       console.error('Fetch error:', error);
       return null;
     }
   }
 
-  function generatePostHTML(post) {
-    console.log(post._embedded["wp:featuredmedia"][0].source_url);
 
-    
+  const contentWrapper = document.querySelector(".contentwrapper");
+  const footer = document.querySelector(".footerwrapper");
+  console.log(footer);
+
+  function generatePostHTML(post) {
+    console.log(post);
+    const postImage = document.createElement('img');
+    contentWrapper.appendChild(postImage);
+    postImage.src = post._embedded["wp:featuredmedia"][0].source_url;
+
+    const postTitle = document.createElement('h1');
+    contentWrapper.appendChild(postTitle);
+    postTitle.textContent = post.title.rendered;
+
+    const postContent = document.createElement('div');
+    contentWrapper.appendChild(postContent);
+    postContent.innerHTML = post.content.rendered;
+
+    const postDate = document.createElement('div');
+    footer.appendChild(postDate);
+    postDate.innerHTML = post.date;
+
+    const postTag = document.createElement('div');
+    footer.appendChild(postTag);
+
+    var tagId = post.tags[0];
+    if (tagId === 20) {
+      tagId = 'By Werner Hamre'
+    }
+    postTag.innerHTML = tagId;  
   }
 
   const urlParameter = new URLSearchParams(window.location.search);

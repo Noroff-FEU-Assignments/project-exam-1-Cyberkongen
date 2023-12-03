@@ -39,7 +39,7 @@ fetch(apiUrl)
       const updateSlide = () => {
         currentSlideIndex = slideIndex;
         carousel.querySelector(`#slide-${currentSlideIndex + 1}`).scrollIntoView();
-        updateTitle(); // Update the title after changing the slide
+        updateTitle();
       };
       carouselButton.addEventListener('click', (event) => {
         event.preventDefault();

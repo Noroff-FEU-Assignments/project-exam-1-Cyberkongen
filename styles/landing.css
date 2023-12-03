@@ -238,4 +238,25 @@ h2, h1 {
     .carousel img {
         max-width: 26rem;
         }
+    .bottomSectionDiv {
+    width: 94%;
+    }
+    .bottomSectionDiv img {
+        width: 100%;
+    }
+    .bottomSectionDiv h1 {
+        font-size: 1.2rem;
+    }
+    .postContainer  h2 {
+        font-size: 1.1vh;
+    }
+
+}
+
+@media screen and (max-width: 950px) {
+    .latestPosts {
+        margin-top: 2%;
+        flex-basis: 96%;
+        gap: 8px;
+    }
 }

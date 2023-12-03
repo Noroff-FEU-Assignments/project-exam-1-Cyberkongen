@@ -7,12 +7,10 @@ fetch(apiUrl)
   .then((response) => response.json())
   .then((data) => {
     data.forEach((post) => {
-      //* <article class="card">
       const article = document.createElement("article");
       postsContainer.appendChild(article);
       article.classList.add("card");
 
-      //* <header class="card__thumb">
       const header = document.createElement("header");
       article.appendChild(header);
       header.classList.add("card__thumb");
@@ -26,7 +24,6 @@ fetch(apiUrl)
 
       aImg.src = post._embedded["wp:featuredmedia"][0].source_url;
 
-      //* <div class="card__date">
       const postDate = new Date(post.date);
       const formattedDay = postDate.toLocaleDateString('en-GB', {
         day: '2-digit',
@@ -51,7 +48,6 @@ fetch(apiUrl)
 
       card__date__month.textContent = formattedMonthYear;
 
-      //* <div class="card__body">
       const card__body = document.createElement("div");
       article.appendChild(card__body);
       card__body.classList.add("card__body");
@@ -95,7 +91,6 @@ fetch(apiUrl)
 
       card__description.innerHTML = post.excerpt.rendered;
 
-      //*  <footer class="card__footer">
 
       const card__footer = document.createElement("footer");
       article.appendChild(card__footer);
@@ -124,6 +119,14 @@ fetch(apiUrl)
         });
       }
       iconCommentA.textContent = totalComments.toString() + " Comments";
+
+      let queryString = 'post='+post.id;
+      header.addEventListener("click", imgIDtoURL);
+
+      function imgIDtoURL() {
+        let updatedUrl = 'specificpost.html' + '?' + queryString;
+        window.location.href = updatedUrl;
+      }
     })
 
     const cards = document.querySelectorAll('.posts-container .card');
